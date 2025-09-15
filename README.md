@@ -36,8 +36,8 @@ A high-fidelity, interactive prototype of the FlexyGo application was designed u
 ---
 
 ### 🖋 Author
-Caroline Ang
-⁠Evelyn Caristy Untariady
-⁠Laurel Evelina Widjaja 
-Jonathan Christopher Gani
-⁠Vincent Moswen
+* Caroline Ang
+* Evelyn Caristy Untariady
+* Laurel Evelina Widjaja
+* Jonathan Christopher Gani
+* ⁠Vincent Moswen
