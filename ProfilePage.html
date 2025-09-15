@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexyGo</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+
+</head>
+<body>
+    <div id="header-container">
+        <div class="nav-container">
+            <p id="brand-name" onclick="HomeButton()">Flexy Go</p>
+                <div class="nav-bar">
+                    <img src="./assets/account_icon.png" alt="user" class="icon" onclick="ProfileButton()">
+                </div>
+        </div>
+    </div>
+    <div class="home">
+        <div class="atm">
+            <img src="./assets/atm.png" alt="" srcset="" class="atmimg">
+        </div>
+        <div class="tutorial" onclick="TutorialButton()">
+            <p>Tutorial</p>
+        </div>
+        <div class="tutorial">
+            <p>Change Password</p>
+        </div>
+        <div class="logout" onclick="Logout()">
+            <p id="brand-name" style="font-size: 1.4rem;">Log Out</p>
+        </div>
+    </div>
+       
+
+</body>
+
+<footer>
+    <div class="footer-container">
+        <img src="./assets/home-icon.png" alt="homebutton" srcset="" class="icon" style="width: 5rem;" onclick="HomeButton()">
+        <img src="./assets/convert-icon.png" alt="convertbutton" srcset="" style="width: 5rem;" onclick="ConvertButton()">
+        <img src="./assets/wallet-icon.png" alt="walletbutton" srcset="" class="wallet-icon" onclick="WalletButton()">
+</div>
+</footer>
+</html>

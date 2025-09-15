@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexyGo</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div id="header-container">
+        <div class="nav-container">
+            <p id="brand-name" onclick="HomeButton()">Flexy Go</p>
+                <div class="nav-bar">
+                    <img src="./assets/account_icon.png" alt="user" class="icon" onclick="ProfileButton()">
+                </div>
+        </div>
+    </div>
+    
+    <div id="wallet-container">
+        <div id="wallet">
+            <div id="title-container">
+                <img src="./assets/wallet-icon.png" alt="wallet" srcset="" class="wallet-icon">
+                <p>Wallet</p>
+            </div>
+            <div id="balance-container">
+                <p>Converted Total (IDR)</p>
+                <div id="balance">
+                    <p>IDR <span id="total-balance">*****</span></p>
+                    <img src="./assets/eye-closed.png" alt="eye-closed" srcset="" class="eye-icon" onclick="ShowBalance2()" id="eye-closed2">
+                    <img src="./assets/eye-opened.png" alt="eye-opened" srcset="" class="eye-icon" onclick="HideBalance2()" id="eye-opened2" style="display: none;">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="container">
+        <div id="idr-balance" style="display: none;"></div>
+        <div id="currency-container">
+            <div id="currency">
+                <img src="./assets/usa-flagpng.png" alt="" class="flag-icon">
+                <div id="currency-balance">
+                    <p class="currency-balance">USD <span id="usd-balance"></span><span id="usd-buyrate" style="display: none;"></span><span id="usd-sellrate" style="display: none;"></span></p>
+                    <p class="currency-label">United States Dollar</p>
+                </div>
+            </div>
+            <p onclick="TransactionPageButton('./assets/usa-flagpng.png', 'USD', document.getElementById('usd-balance').textContent, 'United States Dollar', document.getElementById('usd-buyrate').textContent,document.getElementById('usd-sellrate').textContent,document.getElementById('idr-balance').textContent)"> > </p>
+        </div>
+    
+        <div id="currency-container">
+            <div id="currency">
+                <img src="./assets/sg-flag.png" alt="" class="flag-icon">
+                <div id="currency-balance">
+                    <p class="currency-balance">SGD <span id="sgd-balance"></span><span id="sgd-buyrate" style="display: none;"></span><span id="sgd-sellrate" style="display: none;"></span></p>
+                    <p class="currency-label">Singapore Dollar</p>
+                </div>
+            </div>
+            <p onclick="TransactionPageButton('./assets/sg-flag.png', 'SGD', document.getElementById('sgd-balance').textContent, 'Singapore Dollar', document.getElementById('sgd-buyrate').textContent,document.getElementById('sgd-sellrate').textContent,document.getElementById('idr-balance').textContent)"> > </p>
+        </div>
+    
+        <div id="currency-container">
+            <div id="currency">
+                <img src="./assets/china-flag.png" alt="" class="flag-icon">
+                <div id="currency-balance">
+                    <p class="currency-balance">CNY <span id="cny-balance"></span><span id="cny-buyrate" style="display: none;"></span><span id="cny-sellrate" style="display: none;"></span></p>
+                    <p class="currency-label">Chinese Yuan</p>
+                </div>
+            </div>
+            <p onclick="TransactionPageButton('./assets/china-flag.png', 'CNY', document.getElementById('cny-balance').textContent, 'Chinese Yuan', document.getElementById('cny-buyrate').textContent,document.getElementById('cny-sellrate').textContent,document.getElementById('idr-balance').textContent)"> > </p>
+        </div>
+    
+        <div id="currency-container">
+            <div id="currency">
+                <img src="./assets/eu-flag.png" alt="" class="flag-icon">
+                <div id="currency-balance">
+                    <p class="currency-balance">EUR <span id="eur-balance"></span><span id="eur-buyrate" style="display: none;"></span><span id="eur-sellrate" style="display: none;"></span></p>
+                    <p class="currency-label">Euro</p>
+                </div>
+            </div>
+            <p onclick="TransactionPageButton('./assets/eu-flag.png', 'EUR', document.getElementById('eur-balance').textContent, 'Euro', document.getElementById('eur-buyrate').textContent,document.getElementById('eur-sellrate').textContent,document.getElementById('idr-balance').textContent)"> > </p>
+        </div>
+    
+        <div id="currency-container">
+            <div id="currency">
+                <img src="./assets/aus-flag.png" alt="" class="flag-icon">
+                <div id="currency-balance">
+                    <p class="currency-balance">AUD <span id="aud-balance"></span><span id="aud-buyrate" style="display: none;"></span><span id="aud-sellrate" style="display: none;"></span></p>
+                    <p class="currency-label">Australian Dollar</p>
+                </div>
+            </div>
+            <p onclick="TransactionPageButton('./assets/aus-flag.png', 'AUD', document.getElementById('aud-balance').textContent, 'Australian Dollar', document.getElementById('aud-buyrate').textContent,document.getElementById('aud-sellrate').textContent,document.getElementById('idr-balance').textContent)"> > </p>
+        </div>
+    
+        <div id="currency-container">
+            <div id="currency">
+                <img src="./assets/jpn-flag.png" alt="" class="flag-icon">
+                <div id="currency-balance">
+                    <p class="currency-balance">JPY <span id="jpy-balance"></span><span id="jpy-buyrate" style="display: none;"></span><span id="jpy-sellrate" style="display: none;"></span></p>
+                    <p class="currency-label">Japanese Yen</p>
+                </div>
+            </div>
+            <p onclick="TransactionPageButton('./assets/jpn-flag.png', 'JPY', document.getElementById('jpy-balance').textContent, 'Japanese Yen', document.getElementById('jpy-buyrate').textContent,document.getElementById('jpy-sellrate').textContent,document.getElementById('idr-balance').textContent)"> > </p>
+        </div>
+    
+        <div id="currency-container">
+            <div id="currency">
+                <img src="./assets/brit-flag.png" alt="" class="flag-icon">
+                <div id="currency-balance">
+                    <p class="currency-balance">GBP <span id="gbp-balance"></span><span id="gbp-buyrate" style="display: none;"></span><span id="gbp-sellrate" style="display: none;"></span></p>
+                    <p class="currency-label">Pound Sterling</p>
+                </div>
+            </div>
+            <p onclick="TransactionPageButton('./assets/brit-flag.png', 'GBP', document.getElementById('gbp-balance').textContent, 'Pound Sterling', document.getElementById('gbp-buyrate').textContent,document.getElementById('gbp-sellrate').textContent,document.getElementById('idr-balance').textContent)"> > </p>
+        </div>
+    
+        <div id="currency-container">
+            <div id="currency">
+                <img src="./assets/hk-flag.png" alt="" class="flag-icon">
+                <div id="currency-balance">
+                    <p class="currency-balance">HKD <span id="hkd-balance"></span><span id="hkd-buyrate" style="display: none;"></span><span id="hkd-sellrate" style="display: none;"></span></p>
+                    <p class="currency-label">Hongkong Dollar</p>
+                </div>
+            </div>
+            <p onclick="TransactionPageButton('./assets/hk-flag.png', 'HKD', document.getElementById('hkd-balance').textContent, 'Hongkong Dollar', document.getElementById('hkd-buyrate').textContent,document.getElementById('hkd-sellrate').textContent,document.getElementById('idr-balance').textContent)"> > </p>
+        </div>
+    
+        <div id="currency-container">
+            <div id="currency">
+                <img src="./assets/thai-flag.png" alt="" class="flag-icon">
+                <div id="currency-balance">
+                    <p class="currency-balance">THB <span id="thb-balance"></span><span id="thb-buyrate" style="display: none;"></span><span id="thb-sellrate" style="display: none;"></span></p>
+                    <p class="currency-label">Thailand Baht</p>
+                </div>
+            </div>
+            <p onclick="TransactionPageButton('./assets/thai-flag.png', 'THB', document.getElementById('thb-balance').textContent, 'Thailand Baht', document.getElementById('thb-buyrate').textContent,document.getElementById('thb-sellrate').textContent,document.getElementById('idr-balance').textContent)"> > </p>
+        </div>
+    
+        <div id="currency-container">
+            <div id="currency">
+                <img src="./assets/my-flag.png" alt="" class="flag-icon">
+                <div id="currency-balance">
+                    <p class="currency-balance">MYR <span id="myr-balance"></span><span id="myr-buyrate" style="display: none;"></span><span id="myr-sellrate" style="display: none;"></span></p>
+                    <p class="currency-label">Malaysian Ringgit</p>
+                </div>
+            </div>
+            <p onclick="TransactionPageButton('./assets/my-flag.png', 'MYR', document.getElementById('myr-balance').textContent, 'Malaysian Ringgit', document.getElementById('myr-buyrate').textContent,document.getElementById('myr-sellrate').textContent,document.getElementById('idr-balance').textContent)"> > </p>
+        </div>
+    </div>
+    
+    
+</body>
+
+<footer>
+    <div class="footer-container">
+            <img src="./assets/home-icon.png" alt="homebutton" srcset="" class="icon" style="width: 5rem;" onclick="HomeButton()">
+            <img src="./assets/convert-icon.png" alt="convertbutton" srcset="" style="width: 5rem;" onclick="ConvertButton()">
+            <img src="./assets/wallet-icon.png" alt="walletbutton" srcset="" class="wallet-icon" onclick="WalletButton()">
+    </div>
+</footer>
+</html>

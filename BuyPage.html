@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexyGo</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <script src="buy.js"></script>
+
+</head>
+<body>
+    <div id="header-container">
+        <div class="nav-container">
+            <p id="brand-name" onclick="HomeButton()">Flexy Go</p>
+                <div class="nav-bar">
+                    <img src="./assets/account_icon.png" alt="user" class="icon" onclick="ProfileButton()">
+                </div>
+        </div>
+    </div>
+    
+    <p id="idr-balance" style="display: none;"></p>
+    <p id="total-balance" style="display: none;"></p>
+    <p id="sell-rate" style="display: none;"></p>
+    <div id="wallet-container">
+        <div id="wallet">
+            <div id="title-container">
+                <img src="./assets/back-icon.png" alt="wallet" srcset="" class="icon" onclick="WalletButton()">
+                <p><span id="currency-name-title-buy"></span> Balance</p>
+            </div>
+            <div id="balance-container-buy">
+                <div id="currency-buy">
+                    <img src="./assets/indo-flag.png" alt="" srcset="" class="flag-icon">
+                    <p class="currency-balance">IDR <input type="number" id="buy-input" class="buy-input" placeholder="_______"></p>
+                </div>
+                <div id="conversion-rate-container">
+                    <p class="rate-font">IDR to <span id="currency-name-rate"></span> Rate</p>
+                    <p class="number">1 <span id="currency-name-rate2"></span> = <span id="buy-rate"></span> IDR</p>
+                </div>
+                <div id="currency-buy">
+                    <img id='currency-img-buy' alt="" class="flag-icon">
+                    <p class="currency-balance"><span id="currency-name-balance-buy"></span> <input type="number" id="buy-output" class="buy-input" placeholder="_______"></p>
+                </div>
+            </div>
+        </div>
+        <p id="detail-currency-balance-buy" style="display: none;"></p>
+        <div id="purchase-button-container" onclick="BuyPurchase(document.getElementById('currency-name-balance-buy').innerText)">
+            <p id="brand-name" style="font-size: 1.7rem;">Buy</p>
+        </div>
+    </div>
+       
+
+</body>
+
+<footer>
+    <div class="footer-container">
+        <img src="./assets/home-icon.png" alt="homebutton" srcset="" class="icon" style="width: 5rem;" onclick="HomeButton()">
+        <img src="./assets/convert-icon.png" alt="convertbutton" srcset="" style="width: 5rem;" onclick="ConvertButton()">
+        <img src="./assets/wallet-icon.png" alt="walletbutton" srcset="" class="wallet-icon" onclick="WalletButton()">
+</div>
+</footer>
+</html>

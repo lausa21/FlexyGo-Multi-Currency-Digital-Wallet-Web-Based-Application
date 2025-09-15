@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Edu+SA+Beginner:wght@400..700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Peralta&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Edu+SA+Beginner:wght@400..700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Peralta&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Edu+SA+Beginner:wght@400..700&family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Peralta&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap');
+
+
+:root{
+    --page-name-font : 'Lora';
+    --font-default : 'EB Garamond';
+    --header-color : #3F6189;
+    --background-color : #F2F8FE;
+    --brand-name-font : 'Merriweather', 'serif';
+    --arrive-color : #6F8DB1;
+    --number-font : 'Roboto Mono';
+    --gray-color : #cddbec;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    font-family: var(--font-default);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; 
+    text-align: center;
+}
+
+p {
+    font-family: var(--font-default);
+    font-size: 1.3rem;
+    margin-bottom: 0.3rem;
+    font-weight: 400;
+}
+
+.content-wrapper {
+    width: 75%;
+    max-width: 250px;
+    min-width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content-wrapper img {
+    width: 100%;
+    height: auto;
+}
+
+.content-wrapper p {
+    font-family: var(--font-default);
+    font-size: 1.3rem;
+    margin-top: 0.2rem;
+    margin-bottom: 1rem;
+    font-weight: 400;
+}
+
+.content-wrapper button {
+    width: 100%;
+    font-size: 1rem;
+    font-family: var(--font-default);
+    padding: 0.6rem 0;
+    border-radius: 999px;
+    margin: 0.3rem 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+button.login-btn {
+    background-color: var(--gray-color);
+    border: none;
+    margin-top: 1.5rem;
+}
+
+button.register-btn {
+    background-color: transparent;
+    color: black;
+    border: 2px solid black;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+
+.input-group {
+    position: relative;
+    width: 100%;
+}
+
+.input-group label {
+    position: absolute;
+    top: 0.2rem;
+    left: 1rem;
+    background-color: var(--gray-color);
+    padding: 0 0.4rem;
+    font-size: 0.75rem;
+    font-family: var(--font-default);
+    color: black;
+    z-index: 1;
+    pointer-events: none; /* so it doesn't block clicks */
+}
+
+.input-group input {
+    width: 100%;
+    padding: 0.8rem 1.5rem;
+    border-radius: 999px;
+    border: none;
+    font-family: var(--font-default);
+    font-size: 0.9rem;
+    outline: none;
+    background-color: var(--gray-color);
+    box-sizing: border-box;
+    margin-bottom: 0.5rem;
+}
+
+button.login-btn2, .register-btn2 {
+    background-color: var(--header-color);
+    border: none;
+    margin-top: 1rem;
+    color: white;
+    font-size: small;
+}
+
+.lower {
+    display: inline-flex; 
+    align-items: center;  
+    font-size: 12px !important;
+}
+
+.lower a {
+    margin-left: 5px; 
+    color: black; 
+    font-weight: 800; 
+    text-decoration: none;
+}

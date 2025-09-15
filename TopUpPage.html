@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexyGo</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+
+</head>
+<body>
+    <div id="header-container">
+        <div class="nav-container">
+            <p id="brand-name" onclick="HomeButton()">Flexy Go</p>
+                <div class="nav-bar">
+                    <img src="./assets/account_icon.png" alt="user" class="icon" onclick="ProfileButton()">
+                </div>
+        </div>
+    </div>
+    
+    <div class="home">
+        <div class="home-item-container">
+            <div class="title-home">
+                <img src="./assets/topup-icon.png" alt="" srcset="" class="icon">
+                <p>Top Up Amount</p>
+            </div>
+            <div id="currency-buy">
+                <img src="./assets/indo-flag.png" alt="" srcset="" class="flag-icon">
+                <p class="currency-balance">IDR <input type="number" id="buy-input" class="buy-input" placeholder="_______"></p>
+            </div>
+        </div>
+
+        <div class="home-item-container">
+            <div class="title-home">
+                <img src="./assets/topup-icon.png" alt="" srcset="" class="icon">
+                <p>Virtual Account Number</p>
+            </div>
+            <div class="vanumb">
+                <p>123456789</p>
+            </div>
+        </div>
+
+        <div class="verify-container" onclick="VerifyPayment()">
+            <p id="brand-name" style="font-size: 1.7rem;">Verify Payment</p>
+        </div>
+    </div>
+       
+
+</body>
+
+<footer>
+    <div class="footer-container">
+        <img src="./assets/home-icon.png" alt="homebutton" srcset="" class="icon" style="width: 5rem;" onclick="HomeButton()">
+        <img src="./assets/convert-icon.png" alt="convertbutton" srcset="" style="width: 5rem;" onclick="ConvertButton()">
+        <img src="./assets/wallet-icon.png" alt="walletbutton" srcset="" class="wallet-icon" onclick="WalletButton()">
+</div>
+</footer>
+</html>

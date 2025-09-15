@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexyGo</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <script src="transaction.js"></script>
+</head>
+<body>
+    <div id="header-container">
+        <div class="nav-container">
+            <p id="brand-name" onclick="HomeButton()">Flexy Go</p>
+                <div class="nav-bar">
+                    <img src="./assets/account_icon.png" alt="user" class="icon" onclick="ProfileButton()">
+                </div>
+        </div>
+    </div>
+    
+    <div id="wallet-container">
+        <div id="wallet">
+            <div id="title-container">
+                <img src="./assets/back-icon.png" alt="wallet" srcset="" class="icon" onclick="WalletButton()">
+                <p><span id="currency-name-title"></span> Balance</p>
+            </div>
+            <div id="balance-container">
+                <div id="currency">
+                    <img id='currency-img' alt="" class="flag-icon">
+                    <div id="currency-balance">
+                        <p class="currency-balance"><span id="currency-name-balance"></span> <span id="detail-currency-balance" ></span></p>
+                        <p class="currency-label"><span id="currency-detail-name"></span></p>
+                    </div>
+                </div>
+            </div>
+            <p id="idr-balance" style="display: none;"></p>
+            <div id="buysell-container">
+                <div id="trans">
+                    <p id="buy-rate" style="display: none;"></p>
+                    <p id="sell-rate2" style="display: none;"></p>
+                    <img src="./assets/buy-icon.png" alt="" srcset="" class="icon" onclick="BuyButton(
+                        document.getElementById('currency-img').src, 
+                        document.getElementById('currency-name-title').textContent, 
+                        document.getElementById('detail-currency-balance').textContent, 
+                        document.getElementById('buy-rate').textContent,
+                        document.getElementById('sell-rate2').textContent,
+                        document.getElementById('idr-balance').textContent
+                        )">
+                        <p>Buy</p>
+                    </div>
+                    <div id="trans">
+                        <p id="sell-rate" style="display: none;"></p>
+                        <img src="./assets/sell-icon.png" alt="" srcset="" class="icon" onclick="SellButton(
+                            document.getElementById('currency-img').src, 
+                            document.getElementById('currency-name-title').textContent, 
+                            document.getElementById('detail-currency-balance').textContent, 
+                            document.getElementById('sell-rate').textContent,
+                            document.getElementById('idr-balance').textContent
+                            )">
+                    <p>Sell</p>
+                </div>
+            </div>
+        </div>
+    </div>
+       
+    
+</body>
+
+<footer>
+    <div class="footer-container">
+        <img src="./assets/home-icon.png" alt="homebutton" srcset="" class="icon" style="width: 5rem;" onclick="HomeButton()">
+        <img src="./assets/convert-icon.png" alt="convertbutton" srcset="" style="width: 5rem;" onclick="ConvertButton()">
+        <img src="./assets/wallet-icon.png" alt="walletbutton" srcset="" class="wallet-icon" onclick="WalletButton()">
+</div>
+</footer>
+</html>

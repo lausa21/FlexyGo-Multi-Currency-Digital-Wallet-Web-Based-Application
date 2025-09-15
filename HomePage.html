@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexyGo</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+
+</head>
+<body>
+    <div id="header-container">
+        <div class="nav-container">
+            <p id="brand-name" onclick="HomeButton()">Flexy Go</p>
+                <div class="nav-bar">
+                    <img src="./assets/account_icon.png" alt="user" class="icon" onclick="ProfileButton()">
+                </div>
+        </div>
+    </div>
+    
+    <div class="home">
+        <div class="home-item-container">
+            <div class="title-home">
+                <img src="./assets/wallet-icon.png" alt="" srcset="" class="wallet-icon">
+                <p>IDR Balance</p>
+            </div>
+            <div class="balance-home">
+                <img src="./assets/indo-flag.png" alt="" srcset="" class="icon">
+                <p class="currency-balance">IDR <span id="idr-balance"></span></p>
+                <img src="./assets/eye-closed.png" alt="eye-closed" srcset="" class="eye-icon" onclick="ShowBalance()" id="eye-closed">
+                <img src="./assets/eye-opened.png" alt="eye-opened" srcset="" class="eye-icon" onclick="HideBalance()" id="eye-opened" style="display: none;">
+            </div>
+            <div class="top-up-container" onclick="TopupButton()">
+                <img src="./assets/buy-icon.png" alt="" srcset="" class="icon">
+                <p>Top up</p>
+            </div>
+        </div>
+
+        <div class="home-item-container" onclick="WalletButton()">
+            <div class="title-home">
+                <img src="./assets/wallet-icon.png" alt="" srcset="" class="wallet-icon">
+                <p>Your Balance</p>
+            </div>
+            <div class="home-balance-container">
+                <div id="currency">
+                    <img src="./assets/usa-flagpng.png" alt="" class="flag-icon">
+                    <div id="currency-balance">
+                        <p class="currency-balance">USD <span id="usd-balance"></span></p>
+                        <p class="currency-label">United States Dollar</p>
+                    </div>
+                </div>
+                <p onclick="TransactionPageButton('./assets/usa-flagpng.png', 'USD', document.getElementById('usd-balance').textContent, 'United States Dollar', document.getElementById('usd-buyrate').textContent,document.getElementById('usd-sellrate').textContent,document.getElementById('idr-balance').textContent)"> > </p>
+            </div>
+
+            <div class="home-balance-container">
+                <div id="currency">
+                    <img src="./assets/sg-flag.png" alt="" class="flag-icon">
+                    <div id="currency-balance">
+                        <p class="currency-balance">SGD <span id="sgd-balance"></span></p>
+                        <p class="currency-label">Singapore Dollar</p>
+                    </div>
+                </div>
+                <p onclick="TransactionPageButton('./assets/sg-flag.png', 'SGD', document.getElementById('sgd-balance').textContent, 'Singapore Dollar', document.getElementById('sgd-buyrate').textContent,document.getElementById('sgd-sellrate').textContent,document.getElementById('idr-balance').textContent)"> > </p>
+            </div>
+        </div>
+
+        <div class="home-item-container" onclick="ConvertButton()">
+            <div class="title-home">
+                <img src="./assets/currency-icon.png" alt="" srcset="" class="icon">
+                <p>Today's Currency</p>
+            </div>
+            <div class="home-balance-container">
+                <div class="currency-today">
+                    <p>SGD</p>
+                    <div class="detail-currency-today">
+                        <p>Buy: <span id="sgd-buyrate"></span></p>
+                        <p>Sell: <span id="sgd-sellrate"></span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="home-balance-container">
+                <div class="currency-today">
+                    <p>USD</p>
+                    <div class="detail-currency-today">
+                        <p>Buy: <span id="usd-buyrate"></span></p>
+                        <p>Sell: <span id="usd-sellrate"></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="home-item-container">
+            <div class="title-home">
+                <img src="./assets/alert-icon.png" alt="" srcset="" class="icon">
+                <p>Alert</p>
+            </div>
+            <div class="alert-text">
+                <p>Good news! The USD to IDR exchange rate has dropped to 15.500. Convert now for a better deal!</p>
+                <p>Transaction failed! Unable to convert IDR to USD due to insufficient balance. Please check your funds and try again!</p>
+            </div>
+        </div>
+    </div>
+       
+
+</body>
+
+<footer>
+    <div class="footer-container">
+        <img src="./assets/home-icon.png" alt="homebutton" srcset="" class="icon" style="width: 5rem;" onclick="HomeButton()">
+        <img src="./assets/convert-icon.png" alt="convertbutton" srcset="" style="width: 5rem;" onclick="ConvertButton()">
+        <img src="./assets/wallet-icon.png" alt="walletbutton" srcset="" class="wallet-icon" onclick="WalletButton()">
+</div>
+</footer>
+</html>
